@@ -1,0 +1,79 @@
+.authpage-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e0e7ff;
+}
+.authpage-card {
+  width: 100%;
+  max-width: 900px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  display: flex;
+  overflow: hidden;
+}
+.authpage-left {
+  flex: 1;
+  background: #2563eb;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+}
+.authpage-logo {
+  height: 56px;
+  margin-bottom: 24px;
+}
+.authpage-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.authpage-right {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.apple-btn {
+  width: 100%;
+  padding: 16px 0;
+  margin-bottom: 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.apple-icon {
+  margin-right: 8px;
+  font-size: 1.5rem;
+}
+.toggle-btn {
+  width: 100%;
+  padding: 16px 0;
+  margin-top: 8px;
+  border: 1px solid #2563eb;
+  color: #2563eb;
+  border-radius: 8px;
+  font-weight: 600;
+  background: #f1f5f9;
+  cursor: pointer;
+}
+.authpage-policy {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-top: 24px;
+}
+.authpage-link {
+  text-decoration: underline;
+  color: #2563eb;
+}

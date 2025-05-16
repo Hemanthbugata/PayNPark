@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../styles/Signup.css";
 
 export default function EmailSignupForm({ setUser }) {
   const [name, setName] = useState("");
@@ -35,20 +36,20 @@ export default function EmailSignupForm({ setUser }) {
   };
 
   return (
-    <form onSubmit={handleSignup} className="mb-2">
+    <form onSubmit={handleSignup} className="signup-form">
       <input
         value={name}
         onChange={(e) => setName(e.target.value)}
         placeholder="Full Name"
         required
-        className="w-full px-4 py-2 mb-2 border border-gray-300 rounded"
+        className="signup-input"
       />
       <input
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Email"
         required
-        className="w-full px-4 py-2 mb-2 border border-gray-300 rounded"
+        className="signup-input"
       />
       <input
         value={password}
@@ -56,11 +57,11 @@ export default function EmailSignupForm({ setUser }) {
         type="password"
         placeholder="Password"
         required
-        className="w-full px-4 py-2 mb-2 border border-gray-300 rounded"
+        className="signup-input"
       />
       <button
         type="submit"
-        className="w-full py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700"
+        className="signup-btn"
       >
         Sign up with email
       </button>

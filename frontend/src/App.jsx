@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import AuthPage from "./components/AuthPage";
 import Profile from "./components/Profile";
+import FindParking from "./components/FindParking";
+
 
 export default function App() {
   const [user, setUser] = useState(null);
@@ -36,6 +38,7 @@ export default function App() {
         <Route path="/login" element={<AuthPage setUser={setUser} />} />
         <Route path="/signup" element={<AuthPage setUser={setUser} />} />
         <Route path="/profile" element={<Profile user={user} />} />
+        <Route path="/find-parking" element={<FindParking />} />
       </Routes>
     </Router>
   );

@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 require('dotenv').config();
 
@@ -11,7 +12,14 @@ const PORT = process.env.PORT || 4000;
 const userRoutes = require('./routes/user');
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use(cors({
+  origin: 'http://localhost:5173',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],  // Added OPTIONS explicitly
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept', 'Origin'],
+  credentials: true,
+  exposedHeaders: ['Content-Length', 'X-Foo', 'X-Bar'],  // If needed
+}));
 
 // Connect to MongoDB
 

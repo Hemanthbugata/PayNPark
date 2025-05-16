@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../styles/Login.css";
 
 export default function EmailLoginForm({ setUser }) {
   const [email, setEmail] = useState("");
@@ -25,13 +26,13 @@ export default function EmailLoginForm({ setUser }) {
   };
 
   return (
-    <form onSubmit={handleLogin} className="mb-2">
+    <form onSubmit={handleLogin} className="login-form">
       <input
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Email"
         required
-        className="w-full px-4 py-2 mb-2 border border-gray-300 rounded"
+        className="login-input"
       />
       <input
         value={password}
@@ -39,11 +40,11 @@ export default function EmailLoginForm({ setUser }) {
         type="password"
         placeholder="Password"
         required
-        className="w-full px-4 py-2 mb-2 border border-gray-300 rounded"
+        className="login-input"
       />
       <button
         type="submit"
-        className="w-full py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700"
+        className="login-btn"
       >
         Login with email
       </button>

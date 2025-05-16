@@ -9,6 +9,7 @@ const router = express.Router();
 
 require('dotenv').config();
 
+
 googleClient = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 
 // Register a new user
@@ -70,7 +71,7 @@ router.post('/google-signin', async (req, res) => {
     // Verify the token
     const ticket = await googleClient.verifyIdToken({
       idToken: token,
-      audience: GOOGLE_CLIENT_ID,
+      audience:  process.env.GOOGLE_CLIENT_ID,
     });
     const payload = ticket.getPayload();
     const { email, name } = payload;
@@ -84,7 +85,7 @@ router.post('/google-signin', async (req, res) => {
     }
 
     // Generate JWT
-    const jwtToken = jwt.sign({ id: user._id, role: user.role }, process.env.SECRET_KEY, { expiresIn: '1h' });
+    const jwtToken = jwt.sign({ id: user._id, role: user.role }, process.env.SECRET_KEY, { expiresIn: '24h' });
 
     res.status(200).json({ token: jwtToken, message: 'Google sign-in successful' });
   } catch (error) {

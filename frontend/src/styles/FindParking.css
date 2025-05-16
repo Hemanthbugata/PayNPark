@@ -1,0 +1,147 @@
+.find-parking-container {
+  max-width: 1500px;
+  margin: 40px auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 48px;
+  padding: 0 24px;
+}
+
+.find-parking-left {
+  flex: 1.05;
+}
+
+.find-parking-title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  line-height: 1.1;
+}
+
+.find-parking-title .highlight {
+  color: #0716b7;
+}
+
+.find-parking-badges {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+}
+
+.find-parking-badges span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+}
+
+.find-parking-desc {
+  color: #374151;
+  font-size: 1.15rem;
+  margin-bottom: 32px;
+}
+
+.find-parking-form {
+  background: #f8fafc;
+  border-radius: 18px;
+  padding: 28px 28px 20px 28px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  max-width: 600px;
+}
+
+.find-parking-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.find-parking-tab {
+  flex: 1;
+  background: #f1f5f9;
+  border: none;
+  padding: 14px 0;
+  border-radius: 8px;
+  font-size: 1.08rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.find-parking-tab.active,
+.find-parking-tab:hover {
+  background: #2c4ecb;
+  color: #ffffff;
+}
+
+.find-parking-label {
+  color: #585af0;
+  font-weight: 600;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.find-parking-input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 7px;
+  border: 1px solid #d1d5db;
+  margin-bottom: 16px;
+  font-size: 1rem;
+}
+
+.find-parking-dates {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.find-parking-date-group {
+  flex: 1;
+}
+
+.find-parking-date-label {
+  color: #374151;
+  font-weight: 500;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.find-parking-btn {
+  width: 100%;
+  background: #0415aa;
+  color: #fff;
+  padding: 18px 0;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.15rem;
+  border: none;
+  cursor: pointer;
+  margin-top: 6px;
+  transition: background 0.2s;
+}
+
+.find-parking-btn:hover {
+  background: #16a34a;
+}
+
+.find-parking-image {
+  flex: 1;
+  min-width: 320px;
+  max-width: 480px;
+  height: 420px;         /* Set a fixed height */
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.find-parking-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px;
+}
