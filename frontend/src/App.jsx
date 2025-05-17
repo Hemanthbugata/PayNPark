@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import AuthPage from "./components/AuthPage";
 import Profile from "./components/Profile";
 import FindParking from "./components/FindParking";
+import SpaceOut from "./components/SpaceOut";
 
 
 export default function App() {
@@ -39,6 +40,7 @@ export default function App() {
         <Route path="/signup" element={<AuthPage setUser={setUser} />} />
         <Route path="/profile" element={<Profile user={user} />} />
         <Route path="/find-parking" element={<FindParking />} />
+        <Route path="/rent-out" element={<SpaceOut />} />
       </Routes>
     </Router>
   );

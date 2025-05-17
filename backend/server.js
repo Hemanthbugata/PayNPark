@@ -10,6 +10,8 @@ const PORT = process.env.PORT || 4000;
 
 
 const userRoutes = require('./routes/user');
+const parkingRoutes = require('./routes/parking');
+const spaceOwnerRoutes = require('./routes/spaceOwner');
 
 app.use(bodyParser.json());
 
@@ -32,6 +34,8 @@ mongoose.connect(process.env.MONGODB_URL, {})
   });
 
 app.use('/', userRoutes);
+app.use('/parkingspots', parkingRoutes);
+app.use('/spaceowner', spaceOwnerRoutes);
 
 app.listen(PORT, () => {
     console.log(`Server is running on ${PORT}`);
